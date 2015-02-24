@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/main.css">
+
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      	<!--[if lt IE 9]>
+      	    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      	    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      	<![endif]-->
+      	<!--[if gte IE 9]>
+      	  <style type="text/css"> .gradient { filter: none; } </style>
+      	<![endif]-->
+
+    </head>
+    <body>
+
+        <header>
+
+            <img id="header-logo" alt="Site Logo" src="img\TechGeekLogo.png">
+
+            <form id="header-search-form" action="">
+              <label for="header-search-input">Search</label>
+              <input id="header-search-input" name="header-search-input" type="text" placeholder="Search..">
+              <input id="header-search-button" type="button">
+            </form>
+
+        </header>
+
+        <nav id="header-links">
+            <ul class="nav-buttons left">
+                <li id="internet"><i class="fa fa-globe fa-2x"></i></li>
+                <li id="games"><i class="fa fa-gamepad fa-2x"></i></li>
+                <li id="movies"><i class="fa fa-film fa-2x"></i></li>
+                <li id="technology"><i class="fa fa-server fa-2x"></i></li>
+            </ul>
+        </nav>
+
+
+        <main>
+
+            <div class="news-header">
+
+                <div class="news-header-image-container">
+
+                  <img class="news-header-image" src="http://static2.businessinsider.com/image/507ebba6eab8ea9b1b000015-1200/here-is-another-view-inside-googles-facility-in-finland-google-says-server-floors-like-these-require-massive-space-and-efficient-power-to-run-all-of-googles-products.jpg" alt="News Header">
+
+                </div>
+
+                <div class="news-header-overlay">
+
+                  <h1>The Power Behind GitHub</h1>
+
+                </div>
+
+            </div>
+
+            <div class="news-body">
+
+              <article>
+                  <p class="paragraph-opener">Today, GitHub stands at the forefront of the open-source community as well as providing people to work together on projects seamlessly. But how does GitHub process all the requests it gets, much less store all the repositories that are created daily?</p>
+
+                  <h2>GitHubs's Infrastructure</h2>
+
+                  <p>When you send a request to GitHub.com, a load-balancer will send you off to their frontend machines. These machines are 8 core, 16GB RAM bare metal servers. If you happen to search through GitHub, they will send the request to 8 core, 32GM RAM bare metal servers, with 15k RPM SAS drives. These machines will process and return results for whatever your query was. </p>
+
+                  <p>Now, most people use GitHub to store their projects and data. These servers are 8 core, 16GB RAM bare metal servers, with six 300GB 15K RPM SAS drives arranged in RAID 10. In case of a server failure, these servers are paired with one another. Should one fail, the other will simply pick up where the other left off. As an additional safety measure, all storage is replicated between the paired servers.</p>
+
+                  <p>With how these separate tiers of servers are setup, it is easy for GitHub to upscale and down scale on their servers. With this setup, GitHub is able to achieve site response times that are consistently under 100ms. With how popular Github is getting these days, its good for such a setup to be able to expand. </p>
+
+                  <h2>GitHubs's Security</h2>
+
+                  <p>GitHub initiates a SSH connection with you and their servers the moment you load the page. To be able to do this, GitHub stores your key into their database, and performs actions that are based on your key. Once you Github has located your key and established a connection, the backend file servers are able to talk with your Git requests, and make sure that your files are uploaded securely. </p>
+
+                  <p>All files are backed up and stored on at least three different locations, as well as an off-site backup incase the main data-centers are destroyed. In addition, Github also provides a dedicated firewall and VPN services on their servers to block unauthorized access. DDoS attacks are becoming more common these days, and as such GitHub provides DDoS mitigation services to help prevent the site from being taken down.</p>
+
+
+
+                  <h3>Sources:</h3>
+                  <ul>
+                    <li class="sources">Image of Google's server floor in Finland: <a href="http://www.businessinsider.com/google-data-center-walkthrough-2012-10?op=1">Business Insider</a></li>
+                    <li class="sources">GitHub's Sever Specs: <a href="https://github.com/blog/530-how-we-made-github-fast">GitHub</a></li>
+
+                    <li class="sources">GitHub's Security: <a href="https://help.github.com/articles/github-security/">GitHub</a></li>
+                  </ul>
+
+                  <p class="note">Note: GitHubs Server Specs are based on a 2009 article. This is not the most up to date information, but unfortunately the only information I could find on how they implemented their servers.</p>
+              </article>
+
+            </div>
+
+        </main>
+
+        <footer>
+
+          <img id="footer-logo" alt="Site Logo" src="img\TechGeekLogo.png">
+
+
+            <ul class="footer-links">
+                <li>© Copyright Here</li>
+                <li>Terms of Service</li>
+                <li>Questions/Concerns?</li>
+            </ul>
+
+        </footer>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
